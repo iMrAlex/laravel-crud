@@ -19,7 +19,7 @@ class ProductoSeeder extends Seeder
 
         // Recorrer cada categoría y crear productos
         foreach ($categorias as $categoria) {
-            for ($i = 0; $i < 10; $i++) { // Insertar 5 productos por categoría
+            for ($i = 0; $i < 3; $i++) { // Insertar 5 productos por categoría
                 Producto::create([
                     'categoria_id' => $categoria->id,
                     'nombre' => $faker->word,
@@ -27,9 +27,6 @@ class ProductoSeeder extends Seeder
                     'precio' => $faker->randomFloat(2, 10, 500), // Precio entre 10 y 500
                     'stock' => $faker->numberBetween(1, 100),
                     'imagen' => $faker->imageUrl(200, 200, 'products'), // URL de imagen aleatoria
-                    'estado' => $faker->boolean,
-                    'created_at' => now(),
-                    'updated_at' => now(),
                 ]);
             }
         }

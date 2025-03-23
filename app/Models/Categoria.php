@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Categoria extends Model
 {
-    use HasFactory; // Agrega esto
+    use HasFactory; // Import para usar factorys
     
     //protected $table = 'categorias';
-
+    
     protected $fillable = [
         'nombre',
         'descripcion',
